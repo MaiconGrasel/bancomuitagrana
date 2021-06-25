@@ -25,7 +25,7 @@ public class Transacao {
     }
     
     public void setConta(Conta x){
-        this.conta = conta;
+        this.conta = x;
     }
     public void setMontante(DecimalFormat a){
         this.montante = a;
