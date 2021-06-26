@@ -1,5 +1,12 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.feevale.muitagrana;
+
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 /**
@@ -63,9 +70,7 @@ public class Transacao {
     public BigDecimal getMontante(){
         return this.montante;
     }
-    
     public LocalDate getData(){
         return this.data;
     }
-    
 }
