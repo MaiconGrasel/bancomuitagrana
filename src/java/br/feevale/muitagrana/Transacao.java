@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.feevale.muitagrana;
 
 import java.math.BigDecimal;
@@ -15,8 +10,10 @@ import java.time.LocalDate;
  */
 public class Transacao {
     private Conta conta;
+    private Conta destino;
     private BigDecimal montante;
     private LocalDate data;
+    
     
     public Transacao(Integer c, BigDecimal m, LocalDate d){
             conta.setIdConta(c);
@@ -27,8 +24,8 @@ public class Transacao {
     public Transacao(){
     }
     
-    public Transacao( Transacao x){
-        this.conta.setIdConta(x.getConta());
+    public Transacao(Transacao x){
+        this.conta = x.getConta();
         this.montante = x.getMontante();
         this.data = x.getData();
     }
@@ -42,17 +39,22 @@ public class Transacao {
        
         return teste;
     }
+    
     public void setConta(Conta x){
         this.conta = x;
     }
-    public void setConta(Integer x){
-        Conta a = new Conta();
-        a.setIdConta(x);
-        this.conta = a;
+    
+    public void setContaDestion(Integer x){
+        Conta a = new Conta(x);
+        this.destino = a;
     }
     
     public void setMontante(BigDecimal a){
         this.montante = a;
+    }
+    public void setContaId(Integer x) {
+        Conta a = new Conta(x);
+        this.conta = a;
     }
     
     public void setDate(){
@@ -62,8 +64,12 @@ public class Transacao {
     public void setDate(LocalDate a){
         this.data = a;
     }
+        
+    public Conta getConta() {
+        return this.conta;
+    }
     
-    public Integer getConta(){
+    public Integer getContaID() {
         return this.conta.getIdConta();
     }
     
@@ -72,5 +78,12 @@ public class Transacao {
     }
     public LocalDate getData(){
         return this.data;
+    }
+    public Conta getDestino(){
+        return this.destino;
+    }
+    
+    public Integer getDestinoID() {
+        return this.destino.getIdConta();
     }
 }

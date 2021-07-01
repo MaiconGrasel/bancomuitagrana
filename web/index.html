@@ -10,18 +10,18 @@ and open the template in the editor.
     <head>
         <title>Banco Muita Grana - Home</title>
         <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
     </head>
     <body>
         <header><h1>Bem Vindo ao Banco Muita Grana</h1></header>
-            <div>
-                <h2>Digite a conta</h2>
-                <form method="get" action="valida_conta.jsp" >
-                    Conta : <input type="number" name="conta"></br>
-                    <input type="submit" value="Acessar"></br>
+        <div class="container">
+                <h2>Digite seu numero de conta</h2>
+                <form method="post" action="valida_conta.jsp">
+                    <input type="number" min="0" name="conta" placeholder="xxxxx"><br>
+                    <input type="submit" value="Acessar"><br>
                 </form>
-            </div>
-        <footer></footer>
+        </div>
+        <footer>2021</footer>
     </body>
 </html>
